@@ -32,9 +32,6 @@ Docker livre un premier aperçu de l’intégration de WebAssembly. Comment abor
 
 _"WebAssembly (Wasm) signera-t-il la fin des conteneurs ? Pas plus que ces derniers n’ont signé la fin des VM, veut-on croire chez Docker."_
 
-L’entreprise exprime ce point de vue de longue date. Elle a toutefois accentué, ces derniers mois, sa communication à ce sujet. En toile de fond, l’intégration de WebAssembly dans sa boîte à outils.
-Le chantier vient de se concrétiser. On peut en avoir un premier aperçu – instable – dans la preview de Docker Desktop.
-
 L’intégration de Wasm repose sur un shim pour containerd. Et sur une fonctionnalité actuellement expérimentale dans Docker : la gestion des images par containerd. Une fois l’image récupérée, le runtime extrait et charge le module Wasm, puis le réseau est configuré.
 
 ![Contaierd](https://www.silicon.fr/wp-content/uploads/2022/10/Docker-Wasm-sch%C3%A9ma.jpg)
