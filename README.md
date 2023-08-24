@@ -1,5 +1,12 @@
 # WebAssembly dans Docker : vers une cohabitation pacifique ?
 
+## Cloud Computing
+
+**La première vague** a été construite sur des machines virtuelles. Elles étaient formidables, et nous les utilisons toujours aujourd'hui. Mais l'innovation ne dort jamais, et il n'a pas fallu longtemps avant que la deuxième vague n'arrive.
+
+**La deuxième vague** de l'informatique en nuage reposait sur les conteneurs. Entre autres choses, ils sont plus petits, plus rapides et plus légers que les machines virtuelles. Encore une fois, cependant, l'innovation ne dort jamais, et il n'a pas fallu longtemps avant que la troisième vague n'arrive.
+
+**La troisième vague** de l'informatique en nuage est là, et elle est construite sur WebAssembly. Et comme vous vous y attendez, WebAssembly est plus petit, plus rapide et plus léger que les conteneurs. Il est également plus sécurisé et plus portable.
 
 ## WebAssembly
 
@@ -20,9 +27,10 @@ Les caractéristiques clés de WebAssembly sont les suivantes :
 WebAssembly est souvent utilisé pour exécuter des applications ou des bibliothèques qui nécessitent des performances élevées, comme les jeux en ligne, les simulations, les applications de conception assistée par ordinateur (CAO) et d'autres applications complexes directement dans le navigateur, sans avoir à dépendre uniquement de JavaScript pour cela.
 Docker livre un premier aperçu de l’intégration de WebAssembly. Comment aborde-t-il la cohabitation avec les conteneurs ?
 
-_"WebAssembly (Wasm) signera-t-il la fin des conteneurs ? Pas plus que ces derniers n’ont signé la fin des VM, veut-on croire chez Docker."_
 
 ![Github](https://i0.wp.com/nigelpoulton.com/wp-content/uploads/2022/11/solomon-1.png?resize=1024%2C359&ssl=1)
+
+_"WebAssembly (Wasm) signera-t-il la fin des conteneurs ? Pas plus que ces derniers n’ont signé la fin des VM, veut-on croire chez Docker."_
 
 L’entreprise exprime ce point de vue de longue date. Elle a toutefois accentué, ces derniers mois, sa communication à ce sujet. En toile de fond, l’intégration de WebAssembly dans sa boîte à outils.
 Le chantier vient de se concrétiser. On peut en avoir un premier aperçu – instable – dans la preview de Docker Desktop.
@@ -64,6 +72,16 @@ ENTRYPOINT [ "/wasm.wasm" ]
 
 ```
 
+1. À partir de l'image Docker Rust
+
+2. Ajouter la cible WASM (WebAssembly).
+
+3. Effectuer la construction en ciblant WebAssembly.
+
+4. Démarrer depuis zéro (l'image de base).
+
+5. Copiez le fichier WebAssembly généré lors de la précédente étape.
+
 _Dockerfile-native_
 
 ```
@@ -73,10 +91,14 @@ COPY Cargo.toml .
 COPY Cargo.lock .
 COPY src src
 
-RUN RUSTFLAGS='-C target-feature=+crt-static' cargo build --release 
+1. RUN RUSTFLAGS='-C target-feature=+crt-static' cargo build --release 
 
-FROM scratch                                                        
+2. FROM scratch                                                        
 
 COPY --from=build /target/release/hello-docker native
 
 ```
+
+1. Render le binaire autonome (auto-suffisant).
+
+2. Démmarer depuis zéro
