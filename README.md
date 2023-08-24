@@ -4,9 +4,9 @@
 
 **_La première vague_** a été construite sur des machines virtuelles. Elles étaient formidables, et nous les utilisons toujours aujourd'hui. Mais l'innovation ne dort jamais, et il n'a pas fallu longtemps avant que la deuxième vague n'arrive.
 
-**_La deuxième vague_** de l'informatique en nuage reposait sur les conteneurs. Entre autres choses, ils sont plus petits, plus rapides et plus légers que les machines virtuelles. Encore une fois, cependant, l'innovation ne dort jamais, et il n'a pas fallu longtemps avant que la troisième vague n'arrive.
+**_La deuxième vague_** de _cloud computing_ reposait sur les conteneurs. Entre autres choses, ils sont plus petits, plus rapides et plus légers que les machines virtuelles.
 
-**_La troisième vague_** de l'informatique en nuage est là, et elle est construite sur WebAssembly. Et comme vous vous y attendez, WebAssembly est plus petit, plus rapide et plus léger que les conteneurs. Il est également plus sécurisé et plus portable.
+**_La troisième vague_** de _cloud computing_ est là, et elle est construite sur WebAssembly. Et comme nous nous y attendons, WebAssembly est plus petit, plus rapide et plus léger que les conteneurs. Il est également plus sécurisé et plus portable.
 
 ## WebAssembly
 
