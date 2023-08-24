@@ -1,4 +1,4 @@
-# WebAssembly dans Docker : vers une cohabitation pacifique ?WebAssembly dans Docker : vers une cohabitation pacifique ?
+# WebAssembly dans Docker : vers une cohabitation pacifique ?
 
 
 ## WebAssembly
@@ -20,7 +20,7 @@ Les caractéristiques clés de WebAssembly sont les suivantes :
 WebAssembly est souvent utilisé pour exécuter des applications ou des bibliothèques qui nécessitent des performances élevées, comme les jeux en ligne, les simulations, les applications de conception assistée par ordinateur (CAO) et d'autres applications complexes directement dans le navigateur, sans avoir à dépendre uniquement de JavaScript pour cela.
 Docker livre un premier aperçu de l’intégration de WebAssembly. Comment aborde-t-il la cohabitation avec les conteneurs ?
 
-_WebAssembly (Wasm) signera-t-il la fin des conteneurs ? Pas plus que ces derniers n’ont signé la fin des VM, veut-on croire chez Docker._
+_"WebAssembly (Wasm) signera-t-il la fin des conteneurs ? Pas plus que ces derniers n’ont signé la fin des VM, veut-on croire chez Docker."_
 
 ![Github](https://i0.wp.com/nigelpoulton.com/wp-content/uploads/2022/11/solomon-1.png?resize=1024%2C359&ssl=1)
 
